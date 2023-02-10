@@ -41,6 +41,16 @@ Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the correspond
 
 * 3. Run each command behind the "View push commands" button of the created repository.
 
+<img width="642" src="assets/3.png">
+
+<img width="642" src="assets/4.png">
+
 * 4. Create a new service in AWS App Runner.
 
+<img width="642" src="assets/5.png">
+
+<img width="642" src="assets/6.png">
+
 * 5. Test the project on the cloud.
+
+<img width="642" src="assets/7.png">
