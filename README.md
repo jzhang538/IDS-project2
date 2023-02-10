@@ -26,9 +26,21 @@ In project 2, our target is to build a Microservice in Rust. In particular, I cr
 * Usage of an example:
 
 Url "0.0.0.0:8080" returns the root page: "Hi! You can get the zodiac sign of your input date via /check/<month>/<day>!"
+
 <img width="642" src="assets/1.png">
 
-Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the corresponding zodiac sign for the input date (e.g., August 22 -> Leo) 
+Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the corresponding zodiac sign for the input date (e.g., August 22 -> Leo)
+
 <img width="642" src="assets/2.png">
 
 ## 3. Deploy the project on the cloud.
+
+* 1. Deploy the codebase on AWS Cloud9.
+
+* 2. Create a private repository (e.g., zodiac) on AWS Amazon Elastic Container Registry.
+
+* 3. Run each command behind the "View push commands" button of the created repository.
+
+* 4. Create a new service in AWS App Runner.
+
+* 5. Test the project on the cloud.
