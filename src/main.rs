@@ -52,7 +52,8 @@ pub fn get_zodiac_sign(month: i32, day: i32) -> &'static str {
 async fn check(info: web::Path<(i32, i32)>) -> Result<NamedFile, Error> {
     let result = get_zodiac_sign(info.0, info.1);
     let name = result.to_string();
-    let file_name = format!("./src/images/{}.png", name);
+    let file_name = format!("https://github.com/jzhang538/IDS-project2/tree/master/src/images/{}.png", name);
+    // let file_name = format!("./src/images/{}.png", name);
     Ok(NamedFile::open(file_name)?)
 }
 
