@@ -57,7 +57,7 @@ Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the correspond
 
 ## 4. Deploy the project via Minikube
 
-* 0. Install minikube and kubectl
+* Requirements: Install minikube and kubectl
 
 <img width="642" src="assets/mini0.png">
 
@@ -90,7 +90,9 @@ Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the correspond
 * 11. Cleanup
 
 `kubectl delete service project2`
+  
 `kubectl delete deployment project2`
+  
 `minikube stop`
 
 <img width="642" src="assets/mini4.png">
