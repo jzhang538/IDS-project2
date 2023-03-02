@@ -79,9 +79,9 @@ Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the correspond
 
 * 7. Create service and expose it: `kubectl expose deployment project2 --type=LoadBalancer --port=8088`
 
-* 8. View services: `kubectl get service weather-api`
+* 8. View services: `kubectl get service project2`
 
-* 9. `minikube service project --url`
+* 9. `minikube service project2 --url`
 
 <img width="642" src="assets/mini3.png">
 
