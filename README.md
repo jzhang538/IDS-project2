@@ -33,7 +33,7 @@ Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the correspond
 
 <img width="642" src="assets/2.png">
 
-## 3. Deploy the project on the cloud.
+## 3. Deploy the project on the cloud via AWS App Runner
 
 * 1. Deploy the codebase on AWS Cloud9.
 
@@ -54,3 +54,43 @@ Url "0.0.0.0:8080/check/<month>/<day>" returns a cartoon image of the correspond
 * 5. Test the project on the cloud.
 
 <img width="642" src="assets/7.png">
+
+## 4. Deploy the project via Minikube
+
+* 0. Install minikube and kubectl
+
+<img width="642" src="assets/mini0.png">
+
+* 1. Push the docker to the Dockerhub: https://hub.docker.com/r/jzhang538/project2 (Remember to run `sudo chmod 666 /var/run/docker.sock` when permission deny occurs)
+
+<img width="400" src="assets/mini1.png">
+
+* 2. `minikube start`
+
+* 3. `dashboard --url`
+
+<img width="642" src="assets/mini2.png">
+
+* 4. Hover over link and "follow link"
+
+* 5. Create a deployment: `kubectl create deployment project2 --image=registry.hub.docker.com/jzhang538/project2`
+
+* 6. View deployment: `kubectl get deployments`
+
+* 7. Create service and expose it: `kubectl expose deployment project2 --type=LoadBalancer --port=8088`
+
+* 8. View services: `kubectl get service weather-api`
+
+* 9. `minikube service project --url`
+
+<img width="642" src="assets/mini3.png">
+
+* 10. Curl web service
+
+* 11. Cleanup
+
+`kubectl delete service project2`
+`kubectl delete deployment project2`
+`minikube stop`
+
+<img width="642" src="assets/mini4.png">
